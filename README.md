@@ -34,4 +34,16 @@ The code is organized in a Python Notebook, with modules for Imports, Pytorch cl
 
  - Bonus Task D: Successfully ran the classification model with only the text features to find that it could perform comparably to its results from Task C.​
 
+## Codebase
+
+The Python notebook is setup to have the [Hateful memes Dataset](https://www.kaggle.com/datasets/parthplc/facebook-hateful-meme-dataset) downloaded and present in the data folder in the same directory as the python notebook, i.e., ./data will contain all the jsonl files and the img folder. The dataset is not included in this repo.
+
+The Python notebook is split into modules to run the required labelled task and/or functionality.
+
+## Solution approach
+
+The Preprocessor uses an SSDLite320_MobileNet_V3 model to extract image features by object detection and a text corpus is created from the jsonl file text field.
+
+The Classifier has toggle to choose whether to use image and/or text features, with a safety in place to abort when no features are passed.
+
 ​
